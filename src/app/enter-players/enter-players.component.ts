@@ -14,47 +14,47 @@ export class EnterPlayersComponent {
   phasearr:any=[]
   images=["assets/lara.png","assets/john1.png","assets/rock.png","assets/WWE-PNG-Free-Download.png","/assets/charlotte-flair.png"]
   playersData:any= [
-  {
-      name: 'Wrestler A',
-      health: 100,
-      image:"./../assets/lara.png",
-      moves: [
-        { name: 'Move A', damage: 45, type: 'signature' },
-        { name: 'Move B', damage: 20, type: 'signature' },
-        { name: 'Finishing Move', damage: 100, type: 'finisher' },
-      ],
+  // {
+  //     name: 'Wrestler A',
+  //     health: 100,
+  //     image:"./../assets/lara.png",
+  //     moves: [
+  //       { name: 'Move A', damage: 45, type: 'signature' },
+  //       { name: 'Move B', damage: 20, type: 'signature' },
+  //       { name: 'Finishing Move', damage: 100, type: 'finisher' },
+  //     ],
      
-    },
-    {
-      name: 'Wrestler B',
-      health: 110,
-      image:"./../assets/john1.png",
-      moves: [
-        { name: 'Move X', damage: 35, type: 'signature' },
-        { name: 'Move Y', damage: 25, type: 'signature' },
-        { name: 'Ultimate Slam', damage: 95, type: 'finisher' },
-      ],
-    },
-    {
-      name: 'Wrestler C',
-      health: 90,
-      image:"./../assets/rock.png",
-      moves: [
-        { name: 'Power Punch', damage: 40, type: 'signature' },
-        { name: 'Quick Kick', damage: 15, type: 'signature' },
-        { name: 'Thunder Strike', damage: 110, type: 'finisher' },
-      ],
-    },
-    {
-      name: 'Wrestler D',
-      health: 90,
-      image:"./../assets/WWE-PNG-Free-Download.png",
-      moves: [
-        { name: 'Power Punch', damage: 40, type: 'signature' },
-        { name: 'Quick Kick', damage: 15, type: 'signature' },
-        { name: 'Thunder Strike', damage: 110, type: 'finisher' },
-      ],
-    },
+  //   },
+  //   {
+  //     name: 'Wrestler B',
+  //     health: 110,
+  //     image:"./../assets/john1.png",
+  //     moves: [
+  //       { name: 'Move X', damage: 35, type: 'signature' },
+  //       { name: 'Move Y', damage: 25, type: 'signature' },
+  //       { name: 'Ultimate Slam', damage: 95, type: 'finisher' },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Wrestler C',
+  //     health: 90,
+  //     image:"./../assets/rock.png",
+  //     moves: [
+  //       { name: 'Power Punch', damage: 40, type: 'signature' },
+  //       { name: 'Quick Kick', damage: 15, type: 'signature' },
+  //       { name: 'Thunder Strike', damage: 110, type: 'finisher' },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Wrestler D',
+  //     health: 90,
+  //     image:"./../assets/WWE-PNG-Free-Download.png",
+  //     moves: [
+  //       { name: 'Power Punch', damage: 40, type: 'signature' },
+  //       { name: 'Quick Kick', damage: 15, type: 'signature' },
+  //       { name: 'Thunder Strike', damage: 110, type: 'finisher' },
+  //     ],
+  //   },
     // {
     //   name: 'Wrestler E',
     //   health: 90,
