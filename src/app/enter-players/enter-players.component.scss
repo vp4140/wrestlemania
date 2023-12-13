@@ -1,0 +1,44 @@
+.pool-of-wrestlers{
+    text-align: center;
+    font-family: ui-sans-serif;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: white;
+    .wrestlers_block{
+        display: flex;    text-align: center;justify-content: center;  flex-wrap: wrap;
+    }
+    .wrestler-for{
+        margin: 2rem
+    }
+    .wrestler-image{
+        width:10rem;height: 10rem;
+    }
+}
+
+.center-elements{
+    display: flex;    text-align: center;justify-content: center;
+}
+.image-size{
+    width:10rem;height: 10rem;
+}
+.winner-image{
+    width: 7rem;
+    margin-top: -10rem;
+    transform: rotate(-28.8329deg) scale(1, 1);
+}
+.phase{
+    margin: 2rem; display: flex;justify-content: center;    flex-wrap: wrap;
+    .phase-block{
+        width: 20rem;
+    margin: 1rem;
+    }
+    .font-adjustment{
+        text-align: center;font-family:  ui-sans-serif;
+        font-size: 1.5rem;
+    }
+}
+.margin-top{
+    margin-top: 1rem;
+    color: white;
+    font-family: ui-sans-serif;
+}

@@ -1,0 +1,28 @@
+.about-right-block {
+  background-color: #424242;
+    width: fit-content;
+    max-height: 35rem;
+    overflow-y: auto;
+    .custom-margin{
+      margin-left:1rem;
+    }
+    
+    padding: 2rem;
+    @media (max-width: 767px) {
+      .custom-margin{
+      
+        margin-left: unset;
+        margin-bottom: 1rem;
+      }
+      width: unset;
+        max-height: 35rem;
+        overflow-y: auto;
+      }
+    .form-adjustment {
+      width: 100%;
+    }
+  }
+
+.custom-form-block{
+  display: flex; flex-wrap: wrap;
+}

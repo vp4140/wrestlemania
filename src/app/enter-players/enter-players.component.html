@@ -1,0 +1,70 @@
+
+<div>
+
+<div class="pool-of-wrestlers" >
+    <p color="primary">Pool of Wrestlers in the tournament</p>   
+    <button mat-raised-button color="primary" [disabled]="playersData.length>=5" (click)="openDialog()">Add Wrestler</button>
+<div  class="wrestlers_block">
+    
+    <div class="wrestler-for" *ngFor="let a of playersData; let i = index" >
+        <div>
+            
+            <img class="wrestler-image" [src]="a.image" alt="">
+            <p>{{a.name}}</p> 
+        </div>
+    
+    </div>
+</div>
+
+</div>
+
+<div class="center-elements margin-top">
+  
+    <button mat-raised-button  [disabled]="playersData.length==0" color="primary" (click)="startPlay()">Play Game</button>
+</div>
+
+<div  *ngFor="let phase of phasearr; let phaseindex = index">
+    <h2 class="center-elements margin-top">Phase {{phaseindex+1}} of the tournament</h2>
+    <div class="phase"  >
+      
+        <div *ngFor="let match of phase; index as i"  class="phase-block">
+        <div  class="font-adjustment">
+            
+                
+            
+            <div  class="center-elements">
+                <div >
+                    <img class="image-size"  [src]="match?.player1?.image" alt="">
+                    <img *ngIf="match.winner==match.player1" src="assets/winner.png" alt="" class="winner-image" >
+                    <img *ngIf="match.winner==match.player1 && phaseindex == phasearr.length-1" src="assets/belt.png" alt="" class="winner-image" >
+    
+                </div>
+                
+                <div >
+                    <img *ngIf="!match.pass;else unknown " class="image-size"  [src]="match?.player2?.image" alt="">
+                    
+                    <ng-template #unknown><img class="image-size" src="assets/unknown.jpeg" alt=""></ng-template>
+                    <img *ngIf="match.winner==match.player2" src="assets/winner.png" alt="" class="winner-image" >
+                    <img *ngIf="match.winner==match.player2 && phaseindex == phasearr.length-1" src="assets/belt.png" alt="" class="winner-image" >
+                </div>
+                
+            
+            </div >
+            
+            <div *ngIf="!match.pass;else unknown2 ">
+                <p>{{match?.player1?.name}} VS {{match?.player2?.name}}</p>
+            </div>
+            <ng-template #unknown2><p>{{match?.player1?.name}} got a BYE!</p></ng-template>
+    
+            
+            <button mat-raised-button color="primary" (click)="checkMatchDetails(match.match)">Check Match Details</button>
+           
+        </div>
+         
+        </div>
+    </div>
+    
+    
+
+</div>
+</div>

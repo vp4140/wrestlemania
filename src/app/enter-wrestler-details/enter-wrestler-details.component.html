@@ -1,0 +1,81 @@
+
+ 
+  <div class="about-right-block">
+
+
+    <form class="custom-text" [formGroup]="wrestlerForm">
+      <div class="custom-form-block" >
+        <div>
+          <mat-form-field appearance="outline" class="form-group form-adjustment">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" required>
+            
+            <mat-error *ngIf="wrestlerForm.controls['name']?.errors">Name Required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class ="custom-margin" >
+          <mat-form-field appearance="outline" class="form-group form-adjustment">
+            <mat-label>Health</mat-label>
+            <input type="number" matInput formControlName="health" required>
+            <mat-error *ngIf="wrestlerForm.controls['health']?.errors"> Health 0 to 100 reuired</mat-error>
+
+  
+          </mat-form-field>
+  
+        </div>  
+        <div class ="custom-margin" >
+          <button mat-raised-button color="accent" type="button" (click)="addMove()">Add Move</button>
+        </div>
+
+      </div>
+     
+      <div formArrayName="moves">
+        <div *ngFor="let move of getMovesControls(); let i = index" [formGroupName]="i">
+          <div class="custom-form-block" >
+            <div>
+              <mat-form-field appearance="outline" class="form-group form-adjustment">
+                <mat-label>Move Name</mat-label>
+                <input matInput id="moveName" type="text" formControlName="name" required>
+                
+              </mat-form-field>
+            </div>
+            <div class ="custom-margin" > 
+              <mat-form-field appearance="outline" class="form-group form-adjustment">
+                <mat-label>Move Damage:</mat-label>
+                <input matInput id="moveDamage" type="number" formControlName="damage" required>
+                
+              </mat-form-field>
+            </div>
+  
+            <div class ="custom-margin">
+             
+              <mat-form-field  appearance="outline">
+                <mat-label>Move Type</mat-label>
+                <select formControlName="type"  matNativeControl required>
+                  <option value="signature">Signature</option>
+                  <option value="finisher">Finisher</option>
+                </select>
+              </mat-form-field>
+            </div>
+            <div class ="custom-margin">
+              <button mat-raised-button color="warn" type="button" (click)="removeMove(i)">Remove Move</button>
+  
+            </div>
+          </div>
+         
+          
+
+          
+        </div>
+      </div>
+
+  
+
+      <button mat-raised-button color="primary" [disabled]="wrestlerForm.invalid || wrestlerForm.value.moves.length == 0" color="primary" type="submit"
+        (click)="addPlayer()">Submit</button>
+
+
+    </form>
+
+  </div>
+  

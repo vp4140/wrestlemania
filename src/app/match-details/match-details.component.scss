@@ -1,0 +1,22 @@
+.match-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35rem;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: #424242;;overflow-y: auto;
+.details-block{
+    height: 100%;
+
+}
+.custom-text-block{
+    text-align: center;
+    font-family: ui-sans-serif;
+        font-size: 1.5rem;
+        color: white;
+        @media (max-width: 767px) {
+                font-size: 1rem;
+        }
+}
+}
